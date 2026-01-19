@@ -24,7 +24,7 @@ header {
 }
 
 .logo {
-    height: 40px;
+    height: 50px;
     width: auto;
 }
 
@@ -47,8 +47,8 @@ header {
 }
 
 .upload-btn {
-    width: 140px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
     background: #fff;
     border: none;
     cursor: pointer;
@@ -91,7 +91,7 @@ header {
     display: block;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #aaa;
+    color: #ddd;
     margin-bottom: 10px;
 }
 
@@ -106,7 +106,7 @@ header {
     padding: 8px 4px;
     border: none;
     background: #333;
-    color: #888;
+    color: #ccc;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 500;
