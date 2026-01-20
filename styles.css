@@ -9,12 +9,23 @@ body {
     background: #000;
     min-height: 100vh;
     color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     max-width: 500px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -24,7 +35,7 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 60px;
     width: auto;
 }
 
@@ -39,7 +50,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px;
+    flex: 1;
+    padding: 20px;
 }
 
 .upload-area.hidden {
@@ -240,7 +252,7 @@ header {
 /* Footer */
 footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px;
     color: #555;
     font-size: 0.85rem;
 }
@@ -258,7 +270,15 @@ footer a:hover {
 /* Mobile adjustments */
 @media (max-width: 400px) {
     .container {
-        padding: 15px;
+        padding: 24px;
+    }
+
+    .logo {
+        height: 55px;
+    }
+
+    footer {
+        padding: 24px;
     }
 
     .ratio-btn {
