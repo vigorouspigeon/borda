@@ -378,6 +378,7 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        min-height: 100dvh;
     }
 
     .container {
@@ -386,6 +387,8 @@ footer a:hover {
         flex: 1;
         display: flex;
         flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
     }
 
     main {
@@ -396,6 +399,7 @@ footer a:hover {
 
     header {
         margin-bottom: 0;
+        flex-shrink: 0;
     }
 
     .logo {
@@ -409,6 +413,7 @@ footer a:hover {
     }
 
     footer {
+        flex-shrink: 0;
         padding: 20px;
         padding-bottom: 20px;
     }
