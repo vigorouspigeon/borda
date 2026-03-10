@@ -108,6 +108,10 @@ header {
     gap: 6px;
 }
 
+.ratio-label-desktop {
+    margin-top: 10px;
+}
+
 .ratio-btn {
     flex: 1;
     padding: 8px 4px;
@@ -174,6 +178,12 @@ header {
     max-width: 100%;
     max-height: 400px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    cursor: grab;
+    touch-action: none;
+}
+
+#previewCanvas.dragging {
+    cursor: grabbing;
 }
 
 /* Action Buttons */
@@ -244,6 +254,105 @@ header {
     color: #999;
 }
 
+/* Mode Toggle */
+.mode-toggle {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 15px;
+    background: #1a1a1a;
+    padding: 6px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #888;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.mode-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+/* Collage Controls */
+.collage-controls {
+    display: none;
+}
+
+.collage-controls.visible {
+    display: block;
+}
+
+.layout-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.layout-btn {
+    flex: 1;
+    padding: 10px 4px;
+    border: none;
+    background: #333;
+    color: #ccc;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.layout-btn:hover {
+    background: #444;
+}
+
+.layout-btn.active {
+    background: #fff;
+    color: #000;
+}
+
+.collage-slots {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 0 15px 15px;
+}
+
+.collage-slot {
+    flex: 1;
+    aspect-ratio: 1;
+    border: 2px dashed #444;
+    background: #1a1a1a;
+    color: #666;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.collage-slot:hover {
+    border-color: #888;
+}
+
+.collage-slot.filled {
+    border-style: solid;
+    border-color: #333;
+}
+
+.collage-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -261,6 +370,51 @@ footer a {
 
 footer a:hover {
     color: #fff;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .upload-area {
+        min-height: 60vh;
+    }
+
+    .upload-btn {
+        width: 260px;
+        height: 260px;
+    }
+
+    .controls.visible {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 0 25px;
+        align-items: start;
+    }
+
+    .controls .mode-toggle {
+        grid-column: 1 / -1;
+    }
+
+    .controls .preview-container {
+        grid-column: 1;
+        grid-row: 2 / 20;
+        position: sticky;
+        top: 20px;
+    }
+
+    #previewCanvas {
+        max-height: 600px;
+    }
+
+    .controls .control-group,
+    .controls .action-buttons,
+    .controls .new-photo-btn,
+    .controls .collage-controls {
+        grid-column: 2;
+    }
 }
 
 /* Mobile adjustments */
