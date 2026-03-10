@@ -48,11 +48,21 @@
                     <div class="control-group">
                         <label>Layout</label>
                         <div class="layout-buttons">
-                            <button class="layout-btn active" data-layout="2h" title="2 side by side">&#9704;&#9703;</button>
-                            <button class="layout-btn" data-layout="2v" title="2 stacked">&#9705;&#9706;</button>
-                            <button class="layout-btn" data-layout="3l" title="1 left + 2 right">&#9704;&#9701;</button>
-                            <button class="layout-btn" data-layout="3r" title="2 left + 1 right">&#9701;&#9703;</button>
-                            <button class="layout-btn" data-layout="4" title="2x2 grid">&#9702;</button>
+                            <button class="layout-btn active" data-layout="2h" title="2 side by side">
+                                <svg viewBox="0 0 24 18" width="24" height="18"><rect x="0.5" y="0.5" width="10.5" height="17" rx="1" fill="currentColor" opacity="0.5"/><rect x="13" y="0.5" width="10.5" height="17" rx="1" fill="currentColor" opacity="0.5"/></svg>
+                            </button>
+                            <button class="layout-btn" data-layout="2v" title="2 stacked">
+                                <svg viewBox="0 0 24 18" width="24" height="18"><rect x="0.5" y="0.5" width="23" height="7.5" rx="1" fill="currentColor" opacity="0.5"/><rect x="0.5" y="10" width="23" height="7.5" rx="1" fill="currentColor" opacity="0.5"/></svg>
+                            </button>
+                            <button class="layout-btn" data-layout="3l" title="1 left + 2 right">
+                                <svg viewBox="0 0 24 18" width="24" height="18"><rect x="0.5" y="0.5" width="10.5" height="17" rx="1" fill="currentColor" opacity="0.5"/><rect x="13" y="0.5" width="10.5" height="7.5" rx="1" fill="currentColor" opacity="0.5"/><rect x="13" y="10" width="10.5" height="7.5" rx="1" fill="currentColor" opacity="0.5"/></svg>
+                            </button>
+                            <button class="layout-btn" data-layout="3r" title="2 left + 1 right">
+                                <svg viewBox="0 0 24 18" width="24" height="18"><rect x="0.5" y="0.5" width="10.5" height="7.5" rx="1" fill="currentColor" opacity="0.5"/><rect x="0.5" y="10" width="10.5" height="7.5" rx="1" fill="currentColor" opacity="0.5"/><rect x="13" y="0.5" width="10.5" height="17" rx="1" fill="currentColor" opacity="0.5"/></svg>
+                            </button>
+                            <button class="layout-btn" data-layout="4" title="2x2 grid">
+                                <svg viewBox="0 0 24 18" width="24" height="18"><rect x="0.5" y="0.5" width="10.5" height="7.5" rx="1" fill="currentColor" opacity="0.5"/><rect x="13" y="0.5" width="10.5" height="7.5" rx="1" fill="currentColor" opacity="0.5"/><rect x="0.5" y="10" width="10.5" height="7.5" rx="1" fill="currentColor" opacity="0.5"/><rect x="13" y="10" width="10.5" height="7.5" rx="1" fill="currentColor" opacity="0.5"/></svg>
+                            </button>
                         </div>
                     </div>
                     <div class="collage-slots" id="collageSlots"></div>
