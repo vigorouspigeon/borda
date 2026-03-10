@@ -374,23 +374,43 @@ footer a:hover {
 
 /* Desktop layout */
 @media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .container {
         max-width: 960px;
+        padding: 40px;
+    }
+
+    header {
+        margin-bottom: 40px;
+    }
+
+    .logo {
+        height: 70px;
     }
 
     .upload-area {
-        min-height: 60vh;
+        min-height: 50vh;
     }
 
     .upload-btn {
-        width: 260px;
-        height: 260px;
+        width: 280px;
+        height: 280px;
+    }
+
+    .upload-btn svg {
+        width: 100px;
+        height: 100px;
     }
 
     .controls.visible {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
-        gap: 0 25px;
+        gap: 0 30px;
         align-items: start;
     }
 
@@ -403,6 +423,7 @@ footer a:hover {
         grid-row: 2 / 20;
         position: sticky;
         top: 20px;
+        padding: 20px 0;
     }
 
     #previewCanvas {
@@ -414,6 +435,24 @@ footer a:hover {
     .controls .new-photo-btn,
     .controls .collage-controls {
         grid-column: 2;
+    }
+
+    .control-group {
+        padding: 20px;
+    }
+
+    .ratio-btn {
+        padding: 10px 6px;
+        font-size: 0.8rem;
+    }
+
+    .save-btn,
+    .share-btn {
+        padding: 18px;
+    }
+
+    footer {
+        padding-bottom: 40px;
     }
 }
 
